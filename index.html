@@ -199,7 +199,62 @@
         border-top: solid 2px #f4f4f4 !important;
     }
     #main > section {
-        border-top: solid 2px #f4f4f4 !important;
+        border-top: 0 !important;
+    }
+    #main h3,
+    #main h4,
+    #main h4 text {
+        color: #142033 !important;
+    }
+    #main > section > .container > h3,
+    #main header.major h3 {
+        display: inline-block;
+        padding-bottom: 0.28em;
+        border-bottom: 3px solid #1F4E79;
+        margin-bottom: 0.9em;
+    }
+    #main p {
+        color: #243044;
+        line-height: 1.75;
+    }
+    #main p span {
+        color: #243044 !important;
+    }
+    #main a {
+        color: #1A4F86;
+    }
+    #main a:hover {
+        color: #0E335C;
+    }
+    #news,
+    #three,
+    #five {
+        background: #F3F6FA;
+    }
+    .thumbnail {
+        border-radius: 8px;
+        border: 1px solid #E3E8EF;
+    }
+    .lab-figure {
+        margin: 0.4em 0 0;
+    }
+    .lab-figure img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        border: 1px solid #E3E8EF;
+        background: #fff;
+        box-shadow: 0 12px 28px rgba(16, 32, 51, 0.08);
+    }
+    .lab-figure figcaption {
+        margin-top: 0.85em;
+        color: #5C6B7A;
+        font-size: 0.95em;
+        line-height: 1.55;
+    }
+    #header > header .avatar {
+        box-shadow: 0 0 0 4px rgba(228, 194, 122, 0.9);
     }
     hr, hr.major {
         border-bottom: solid 2px #f4f4f4 !important;
@@ -234,6 +289,7 @@
 					<nav id="nav">
 						<ul>
 							<li><a href="#one" class="active">About Me</a></li>
+							<li><a href="#lab">The Lab</a></li>
 							<li><a href="#news">News</a></li>
 							<li><a href="#two">Research</a></li>
 							<li><a href="#three">Academic Appointments</a></li>
@@ -272,6 +328,19 @@
 									<p><span style="color:black">
 									My research interests are physical AI, computer vision, deep learning, human–robot interaction, and clinical assessment of movement and motor function.
 									</span></p>
+							</div>
+						</section>
+						<section id="lab">
+							<div class="container">
+								<header class="major">
+									<h3>The Lab</h3>
+								</header>
+								<figure class="lab-figure">
+									<a href="images/phi-lab.jpg" target="_blank">
+										<img src="images/phi-lab.jpg" alt="Schematic of the Physical Human Intelligence Lab">
+									</a>
+									<figcaption>Schematic of the Physical Human Intelligence Lab, for movement, balance, and human–robot experiments. Select the image to open it at full size.</figcaption>
+								</figure>
 							</div>
 						</section>
 					<!-- News Section -->
