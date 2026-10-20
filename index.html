@@ -140,9 +140,15 @@
         color: #1c1c1c;
     }
     .news-date, .record-when {
-        flex: 0 0 8.5em;
         font-weight: 700;
         color: #1F4E79;
+    }
+    .news-date {
+        flex: 0 0 11em;
+        white-space: nowrap;
+    }
+    .record-when {
+        flex: 0 0 12.5em;
     }
     .record-what strong {
         display: block;
@@ -164,6 +170,19 @@
         height: auto;
         flex: 0 0 72px;
         object-fit: contain;
+    }
+    .appt-logo {
+        height: 54px;
+        width: auto;
+        max-width: 150px;
+        object-fit: contain;
+        flex: 0 0 auto;
+    }
+    #header > header .avatar img {
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+        object-position: center 22%;
     }
     @media screen and (max-width: 736px) {
         .news-list li, .record-list li {
@@ -207,7 +226,7 @@
 			<!-- Header -->
 				<section id="header" class="skel-layers-fixed">
 					<header>
-						<span class="image avatar"><img src="images/ERAN.jpeg" alt="" /></span>
+						<span class="image avatar"><img src="images/eran-profile.jpg" alt="Eran Bamani Beeri" /></span>
 						<h1 id="logo"><a href="#">Eran Bamani Beeri</a></h1>
 						<p class="role">Assistant Professor<br>Bar-Ilan University</p>
 						<p class="contact-line"><a href="mailto:eran.beeri-bamani@biu.ac.il">eran.beeri-bamani@biu.ac.il</a></p>
@@ -262,12 +281,12 @@
 						      <h3>News</h3>
 						    </header>
 						    <ul class="news-list">
-							<li><span class="news-date">2026</span><span>Appointed Assistant Professor in the Department of Information Science and Applied Artificial Intelligence at Bar-Ilan University, and head of the Physical Human Intelligence (PHI) Lab.</span></li>
-							<li><span class="news-date">2026</span><span>"DiG-Net: Enhancing Human–Robot Interaction through Hyper-Range Dynamic Gesture Recognition in Assistive Robotics" was published in ACM Transactions on Human-Robot Interaction.</span></li>
-							<li><span class="news-date">2026</span><span>"Speech-to-Trajectory: Learning Intuitive Verbal Guidance for Robot Motion" was published in Intelligent Service Robotics.</span></li>
-							<li><span class="news-date">2026</span><span>Two papers on clinical gait analysis and smartphone-based balance assessment were published in IEEE Transactions on Neural Systems and Rehabilitation Engineering.</span></li>
-							<li><span class="news-date">2025</span><span>"Real-Time Human Finger Pointing Recognition and Estimation for Robot Directives Using a Single Web-Camera" was published in IEEE Access.</span></li>
-							<li><span class="news-date">March 2025</span><span>Appointed as a reviewer for ACM Transactions on Human-Robot Interaction.</span></li>
+							<li><span class="news-date">October 2026</span><span>Appointed Assistant Professor in the Department of Information Science and Applied Artificial Intelligence at Bar-Ilan University, and head of the Physical Human Intelligence (PHI) Lab.</span></li>
+							<li><span class="news-date">September 2026</span><span>Appointed Associate Editor of IEEE Transactions on Neural Systems and Rehabilitation Engineering.</span></li>
+							<li><span class="news-date">September 2026</span><span>"Bridge-Disease Curriculum Transfer Enables Smartphone-Based Balance Assessment in Rare Neurologic Disorders" was published in IEEE Transactions on Neural Systems and Rehabilitation Engineering.</span></li>
+							<li><span class="news-date">June 2026</span><span>"DiG-Net: Enhancing Human–Robot Interaction through Hyper-Range Dynamic Gesture Recognition in Assistive Robotics" was published in ACM Transactions on Human-Robot Interaction.</span></li>
+							<li><span class="news-date">June 2026</span><span>"Speech-to-Trajectory: Learning Intuitive Verbal Guidance for Robot Motion" was published in Intelligent Service Robotics.</span></li>
+							<li><span class="news-date">March 2026</span><span>"Diffusion-Augmented Spatio-Temporal Graph Convolution for Clinical Gait and Motor Function Assessment" was published in IEEE Transactions on Neural Systems and Rehabilitation Engineering.</span></li>
 							<li><span class="news-date">January 2025</span><span>Awarded the Blavatnik Cambridge Fellowship.</span></li>
 							<li><span class="news-date">November 2024</span><span>"A Diffusion-Based Data Generator for Training Object Recognition Models in Ultra-Range Distance" was accepted to IEEE Robotics and Automation Letters.</span></li>
 							<li><span class="news-date">June 2024</span><span>"Ultra-Range Gesture Recognition using a Web-Camera in Human–Robot Interaction" was accepted to Engineering Applications of Artificial Intelligence.</span></li>
@@ -637,19 +656,29 @@
 								<h3>Academic Appointments</h3>
 								<ul class="record-list">
 									<li>
-										<div class="record-when">2026 – Present</div>
+										<div class="record-when">October 2026 – Present</div>
 										<div class="record-what">
-											<strong>Assistant Professor (Tenure Track)</strong>
-											<span>Department of Information Science and Applied Artificial Intelligence, Bar-Ilan University</span>
-											<span>Head of the <a href="https://sites.biu.ac.il/en/phi-lab-physical-human-intelligence-laboratory">Physical Human Intelligence Laboratory</a></span>
+											<div class="edu-row">
+												<img class="appt-logo" src="schools/bar-ilan.png" alt="Bar-Ilan University">
+												<div>
+													<strong>Assistant Professor (Tenure Track)</strong>
+													<span>Department of Information Science and Applied Artificial Intelligence, Bar-Ilan University</span>
+													<span>Head of the <a href="https://sites.biu.ac.il/en/phi-lab-physical-human-intelligence-laboratory">Physical Human Intelligence Laboratory</a></span>
+												</div>
+											</div>
 										</div>
 									</li>
 									<li>
-										<div class="record-when">2025 – 2026</div>
+										<div class="record-when">May 2025 – September 2026</div>
 										<div class="record-what">
-											<strong>Postdoctoral Associate</strong>
-											<span>Department of Mechanical Engineering, Massachusetts Institute of Technology</span>
-											<span>The 77 Lab</span>
+											<div class="edu-row">
+												<img class="appt-logo" src="schools/mit.png" alt="Massachusetts Institute of Technology">
+												<div>
+													<strong>Postdoctoral Associate</strong>
+													<span>Department of Mechanical Engineering, Massachusetts Institute of Technology</span>
+													<span>The 77 Lab</span>
+												</div>
+											</div>
 										</div>
 									</li>
 								</ul>
@@ -673,13 +702,6 @@
 													<span>Dissertation: Intent Recognition in Natural Human-Robot Collaboration</span>
 												</div>
 											</div>
-										</div>
-									</li>
-									<li>
-										<div class="record-when">2013 – 2019</div>
-										<div class="record-what">
-											<strong>B.Sc. and M.Sc. in Electrical and Electronic Engineering</strong>
-											<span>GPA 95/100, ranked 4th of 321</span>
 										</div>
 									</li>
 								</ul>
