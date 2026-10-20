@@ -228,7 +228,8 @@
     }
     #news,
     #three,
-    #five {
+    #five,
+    #six {
         background: #F3F6FA;
     }
     .thumbnail {
@@ -309,25 +310,71 @@
     .paper-list {
         list-style: none;
         padding: 0;
-        margin: 0.4em 0 0.6em;
+        margin: 0.6em 0 0.4em;
     }
     .paper-list li {
-        display: flex;
-        justify-content: space-between;
-        gap: 1.5em;
-        align-items: baseline;
-        padding: 0.72em 0;
+        display: grid;
+        grid-template-columns: 3.6em 1fr;
+        gap: 0.15em 1rem;
+        align-items: start;
+        padding: 0.95em 0.15em;
         border-bottom: 1px solid #E4E8EE;
         margin: 0;
     }
+    .paper-list .pub-year {
+        color: #1F4E79;
+        font-weight: 700;
+        font-size: 0.95em;
+        line-height: 1.45;
+    }
+    .paper-list a {
+        color: #142033 !important;
+        font-weight: 600;
+        line-height: 1.4;
+    }
+    .paper-list li:hover a {
+        color: #1A4F86 !important;
+    }
     .paper-list .where {
-        flex: 0 0 16em;
+        display: block;
+        margin-top: 0.18em;
         color: #5C6B7A;
         font-size: 0.9em;
-        text-align: right;
+        text-align: left;
     }
     .scholar-more {
-        margin-top: 1.1em;
+        margin-top: 1.15em;
+    }
+    .skill-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.9em;
+        margin-top: 0.4em;
+    }
+    .skill-grid article {
+        background: #fff;
+        border: 1px solid #E3E8EF;
+        border-top: 3px solid #1F4E79;
+        border-radius: 12px;
+        padding: 1.05em 1.15em 1.15em;
+    }
+    .skill-grid h4 {
+        margin: 0 0 0.7em;
+        font-size: 1.05em;
+    }
+    .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4em;
+    }
+    .chips span {
+        background: #F3F6FA;
+        color: #1F4E79;
+        border-radius: 999px;
+        padding: 0.28em 0.72em;
+        font-size: 0.86em;
+        font-weight: 600;
+        line-height: 1.3;
     }
     @media screen and (max-width: 736px) {
         .paper {
@@ -336,13 +383,8 @@
         .paper img {
             height: 180px;
         }
-        .paper-list li {
-            display: block;
-        }
-        .paper-list .where {
-            display: block;
-            text-align: left;
-            margin-top: 0.2em;
+        .skill-grid {
+            grid-template-columns: 1fr;
         }
     }
     hr, hr.major {
@@ -494,15 +536,15 @@
 
 								<h3 class="subhead">More publications</h3>
 								<ul class="paper-list">
-									<li><a href="https://doi.org/10.1109/ACCESS.2025.3616050" target="_blank">Real-Time Human Finger Pointing Recognition and Estimation for Robot Directives</a><span class="where">IEEE Access, 2025</span></li>
-									<li><a href="https://arxiv.org/abs/2404.09846" target="_blank">A Diffusion-Based Data Generator for Training Object Recognition at Ultra-Range Distance</a><span class="where">IEEE Robotics and Automation Letters, 2024</span></li>
-									<li><a href="https://arxiv.org/abs/2406.12424" target="_blank">Recognition of Dynamic Hand Gestures in Long Distance for Robot Guidance</a><span class="where">IEEE ICRA, 2024</span></li>
-									<li><a href="Bamani_ICR2023.pdf">Flip-U-Net for In-Hand Object Recognition Using a Force-Myography Device</a><span class="where">IEEE ICRA, 2023</span></li>
-									<li><a href="https://link.springer.com/article/10.1007/s00521-023-08838-w" target="_blank">Learning a Data-Efficient Model for a Single Agent in Homogeneous Multi-Agent Systems</a><span class="where">Neural Computing and Applications, 2023</span></li>
-									<li><a href="https://ieeexplore.ieee.org/document/9562277" target="_blank">Robust Multi-User In-Hand Object Recognition Using a Wearable Force-Myography Device</a><span class="where">IEEE Robotics and Automation Letters, 2021</span></li>
-									<li><a href="NeurIPS2021_Data_centric_AI.pdf">Open-Sourcing Generative Models for Data-driven Robot Simulations</a><span class="where">NeurIPS Data-Centric AI Workshop, 2021</span></li>
-									<li><a href="https://www.mdpi.com/2079-9292/10/1/53" target="_blank">Scaled Modeling and Measurement for Studying Radio Wave Propagation in Tunnels</a><span class="where">Electronics, 2020</span></li>
-									<li><a href="Study_Of_Human_Body_Effect_On_Wireless_Indoor_Communication_ws2019cd.pdf">Study of Human Body Effect on Wireless Indoor Communication</a><span class="where">Israeli–Russian Bi-National Workshop, 2019</span></li>
+									<li><span class="pub-year">2025</span><div><a href="https://doi.org/10.1109/ACCESS.2025.3616050" target="_blank">Real-Time Human Finger Pointing Recognition and Estimation for Robot Directives</a><span class="where">IEEE Access</span></div></li>
+									<li><span class="pub-year">2024</span><div><a href="https://arxiv.org/abs/2404.09846" target="_blank">A Diffusion-Based Data Generator for Training Object Recognition at Ultra-Range Distance</a><span class="where">IEEE Robotics and Automation Letters</span></div></li>
+									<li><span class="pub-year">2024</span><div><a href="https://arxiv.org/abs/2406.12424" target="_blank">Recognition of Dynamic Hand Gestures in Long Distance for Robot Guidance</a><span class="where">IEEE International Conference on Robotics and Automation</span></div></li>
+									<li><span class="pub-year">2023</span><div><a href="Bamani_ICR2023.pdf">Flip-U-Net for In-Hand Object Recognition Using a Force-Myography Device</a><span class="where">IEEE International Conference on Robotics and Automation</span></div></li>
+									<li><span class="pub-year">2023</span><div><a href="https://link.springer.com/article/10.1007/s00521-023-08838-w" target="_blank">Learning a Data-Efficient Model for a Single Agent in Homogeneous Multi-Agent Systems</a><span class="where">Neural Computing and Applications</span></div></li>
+									<li><span class="pub-year">2021</span><div><a href="https://ieeexplore.ieee.org/document/9562277" target="_blank">Robust Multi-User In-Hand Object Recognition Using a Wearable Force-Myography Device</a><span class="where">IEEE Robotics and Automation Letters</span></div></li>
+									<li><span class="pub-year">2021</span><div><a href="NeurIPS2021_Data_centric_AI.pdf">Open-Sourcing Generative Models for Data-driven Robot Simulations</a><span class="where">NeurIPS Data-Centric AI Workshop</span></div></li>
+									<li><span class="pub-year">2020</span><div><a href="https://www.mdpi.com/2079-9292/10/1/53" target="_blank">Scaled Modeling and Measurement for Studying Radio Wave Propagation in Tunnels</a><span class="where">Electronics</span></div></li>
+									<li><span class="pub-year">2019</span><div><a href="Study_Of_Human_Body_Effect_On_Wireless_Indoor_Communication_ws2019cd.pdf">Study of Human Body Effect on Wireless Indoor Communication</a><span class="where">Israeli–Russian Bi-National Workshop</span></div></li>
 								</ul>
 								<p class="scholar-more"><a href="https://scholar.google.com/citations?user=l0y02JwAAAAJ&hl=en" target="_blank">Full list on Google Scholar</a></p>
 							</div>
@@ -585,13 +627,28 @@
 					<section id="six">
 							<div class="container">
 								<h3>Skills</h3>
-								<ul class="feature-icons skills">
-									<li class="fa-bolt"><strong>Machine learning</strong><br>PyTorch, TensorFlow, and NVIDIA CUDA</li>
-									<li class="fa-eye"><strong>Computer vision</strong><br>OpenCV and visual perception for movement analysis</li>
-									<li class="fa-cubes"><strong>Robotics</strong><br>ROS and Gazebo</li>
-									<li class="fa-code"><strong>Languages</strong><br>Python, C/C++, MATLAB, and Java</li>
-									<li class="fa-laptop"><strong>Development</strong><br>Git, Linux, and PyCharm</li>
-								</ul>
+								<div class="skill-grid">
+									<article>
+										<h4>Machine learning</h4>
+										<div class="chips"><span>PyTorch</span><span>TensorFlow</span><span>NVIDIA CUDA</span></div>
+									</article>
+									<article>
+										<h4>Computer vision</h4>
+										<div class="chips"><span>OpenCV</span><span>Visual perception</span></div>
+									</article>
+									<article>
+										<h4>Robotics</h4>
+										<div class="chips"><span>ROS</span><span>Gazebo</span></div>
+									</article>
+									<article>
+										<h4>Languages</h4>
+										<div class="chips"><span>Python</span><span>C/C++</span><span>MATLAB</span><span>Java</span></div>
+									</article>
+									<article>
+										<h4>Development</h4>
+										<div class="chips"><span>Git</span><span>Linux</span><span>PyCharm</span></div>
+									</article>
+								</div>
 							</div>
 						</section>
 
