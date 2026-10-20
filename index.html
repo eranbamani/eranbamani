@@ -3,8 +3,8 @@
 	<head>
 		<title>Eran Bamani Beeri Personal Website</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
+		<meta name="description" content="Eran Bamani Beeri is an Assistant Professor at Bar-Ilan University and head of the Physical Human Intelligence Lab." />
+		<meta name="keywords" content="Eran Bamani Beeri, Physical AI, human-robot interaction, computer vision, Bar-Ilan University" />
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery.scrollzer.min.js"></script>
@@ -92,20 +92,87 @@
         color: blue;
     }
 
-    /* === MIT Style Update === */
+    /* === Faculty page === */
     #header {
-        background: #2D3C45 !important; /* אפור-כחול מקצועי */
+        background: #102033 !important;
         color: #fff !important;
     }
     #header a, #header h1, #header .icons {
         color: #fff !important;
     }
     #nav ul li a.active, #nav ul li a:hover {
-        color: #A31F34 !important; /* אדום MIT */
+        color: #E4C27A !important;
         font-weight: bold;
     }
+    #header > header p.role {
+        font-style: normal !important;
+        color: #E8EEF4 !important;
+        font-size: 0.95em;
+        letter-spacing: 0.01em;
+        line-height: 1.45;
+        margin: 0.9em 0 0 0;
+    }
+    #header > header p.contact-line {
+        font-style: normal !important;
+        margin: 0.75em 0 0 0;
+        font-size: 0.82em;
+    }
+    #header > header p.contact-line a {
+        color: #D6E4F0 !important;
+        border-bottom: 1px solid rgba(255,255,255,0.35);
+        text-decoration: none;
+    }
     body {
-        background: #F7F7F7 !important; /* אפור בהיר רקע */
+        background: #F4F6F8 !important;
+    }
+    .news-list, .record-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .news-list li, .record-list li {
+        display: flex;
+        gap: 1.25em;
+        align-items: baseline;
+        padding: 0.95em 0;
+        border-bottom: 1px solid #e4e8ee;
+        margin: 0;
+        color: #1c1c1c;
+    }
+    .news-date, .record-when {
+        flex: 0 0 8.5em;
+        font-weight: 700;
+        color: #1F4E79;
+    }
+    .record-what strong {
+        display: block;
+        color: #102033;
+    }
+    .record-what > span,
+    .record-what > a,
+    .record-what .edu-row span {
+        display: block;
+        margin-top: 0.2em;
+    }
+    .edu-row {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+    .edu-logo {
+        width: 72px;
+        height: auto;
+        flex: 0 0 72px;
+        object-fit: contain;
+    }
+    @media screen and (max-width: 736px) {
+        .news-list li, .record-list li {
+            display: block;
+        }
+        .news-date, .record-when {
+            display: block;
+            margin-bottom: 0.3em;
+        }
     }
 
     /* --- אפור עדין לקווים (הפרדה בין סקשנים ובין תפריט) --- */
@@ -119,9 +186,17 @@
         border-bottom: solid 2px #f4f4f4 !important;
     }
 
-    /* --- MIT Red Skills Bullets --- */
     ul.feature-icons li:before {
-        background: #A31F34 !important;
+        background: #1F4E79 !important;
+    }
+    ul.feature-icons.skills li {
+        width: 48%;
+        vertical-align: top;
+        color: #1c1c1c;
+        line-height: 1.45;
+    }
+    ul.feature-icons.skills strong {
+        color: #102033;
     }
 </style>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
@@ -134,14 +209,14 @@
 					<header>
 						<span class="image avatar"><img src="images/ERAN.jpeg" alt="" /></span>
 						<h1 id="logo"><a href="#">Eran Bamani Beeri</a></h1>
-						<a><a href="mailto:eranbamani@gmail.com">eranbamani at gmail dot com</a></a>
-						<a><a href = "dated-CV/Postdoctoral Associate CV - Eran Bamani.pdf">curriculum vitae</a></a></a>
+						<p class="role">Assistant Professor<br>Bar-Ilan University</p>
+						<p class="contact-line"><a href="mailto:eran.beeri-bamani@biu.ac.il">eran.beeri-bamani@biu.ac.il</a></p>
 					</header>
 					<nav id="nav">
 						<ul>
 							<li><a href="#one" class="active">About Me</a></li>
-							<li><a href="#news">News</a><li>
-							<li><a href="#two">Research</a><li>
+							<li><a href="#news">News</a></li>
+							<li><a href="#two">Research</a></li>
 							<li><a href="#three">Academic Appointments</a></li>
 							<li><a href="#four">Education</a></li>
 							<li><a href="#five">Awards</a></li>
@@ -153,10 +228,10 @@
 						<ul class="icons">
 							<!--<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>-->
-							<li><a href="https://www.linkedin.com/in/eran-beeri-bamani-446503124/" class="icon fa-linkedin"><span class="label">Github</span></a></li>
-							<li><a href="mailto:eranbamani@mail.tau.ac.il" class="icon fa-envelope"><span class="label">Email eranbamani@mail.tau.ac.il</span></a></li>
+							<li><a href="https://www.linkedin.com/in/eran-beeri-bamani-446503124/" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="mailto:eran.beeri-bamani@biu.ac.il" class="icon fa-envelope"><span class="label">Email</span></a></li>
 							<li><a href="https://github.com/eran0910" class="icon fa-github"><span class="label">Github</span></a></li>
-							<li><a href="https://scholar.google.com/citations?hl=en&user=l0y02JwAAAAJ&view_op=list_works&citft=1&email_for_op=eranbamani%40gmail.com&gmla=AJ1KiT0myoFWZptBDbj94G1sWMU1thXjeyf2OU6uoobvRNZOIMED25WX1_UugojgyiCKGCpXKBsgdt5gBBhyfb7YVWUpgmQK6uKzubG0tDBhvuxFQofCHpAJoQ_zD5fAh4vy98PfLwaHJ1OkF_XZ5D6_Do4YOKdLIaSLFKnPrWinv-7q9SnvRsXZu3mJ6orA6kCVMwvU6s4swqUiGzQ6N6Eqxuk17A0oMv6AJX9-5c6Wy-k" target="_blank">Google Scholar</a></li>
+							<li><a href="https://scholar.google.com/citations?user=l0y02JwAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
         						<li><a href="https://www.youtube.com/@EranBeeriBamani" class="icon fa-youtube"><span class="label">YouTube</span></a></li>
 
 						</ul>
@@ -176,7 +251,7 @@
 									I am an Assistant Professor in the Department of Information Science and Applied Artificial Intelligence at Bar-Ilan University, and I lead the Physical Human Intelligence (PHI) Lab. My research combines machine learning, computer vision, and multimodal sensing to understand human movement, with applications in clinical assessment and personalized rehabilitation. I hold bachelor's and master's degrees in Electrical and Electronic Engineering. I earned my Ph.D. in Mechanical Engineering from Tel Aviv University and completed my postdoctoral research in the Department of Mechanical Engineering at the Massachusetts Institute of Technology (MIT).
 									</span></p>
 									<p><span style="color:black">
-									My research interests include Human-Robot Interaction (HRI), Deep Learning, Computer Vision, and Rehabilitation Robotics.
+									My research interests are physical AI, computer vision, deep learning, human–robot interaction, and clinical assessment of movement and motor function.
 									</span></p>
 							</div>
 						</section>
@@ -186,15 +261,16 @@
 						    <header class="major">
 						      <h3>News</h3>
 						    </header>
-						    <ul style="list-style: disc; color:black;">
-							<li><b style="color:#A31F34;">May 2025:</b> New preprint: "DiG-Net: Enhancing Quality of Life" (under journal review)</li>
-							<li><b style="color:#A31F34;">May 2025:</b> Joined The 77 Lab at MIT as a Postdoctoral Associate.</li>
-							<li><b style="color:#A31F34;">April 2025:</b> New preprint: "Speech-to-Trajectory: Learning Human-Like Verbal Guidance for Robot Motion" (under journal review)</li>
-							<li><b style="color:#A31F34;">March 2025:</b> Appointed as a reviewer for ACM Transactions on Human-Robot Interaction (THRI).</li>
-							<li><b style="color:#A31F34;">January 2025:</b> Awarded the Blavatnik Cambridge Fellowship for postdoctoral research.</li>
-							<li><b style="color:#A31F34;">November 2024:</b> The paper "A Diffusion-Based Data Generator for Training Object Recognition Models in Ultra-Range Distance" was accepted for publication in IEEE Robotics and Automation Letters (RAS).</li>
-							<li><b style="color:#A31F34;">June 2024:</b> Paper accepted: "Ultra-Range Gesture Recognition using a Web-Camera in Human–Robot Interaction" to Engineering Applications of Artificial Intelligence (Elsevier).</li>
-
+						    <ul class="news-list">
+							<li><span class="news-date">2026</span><span>Appointed Assistant Professor in the Department of Information Science and Applied Artificial Intelligence at Bar-Ilan University, and head of the Physical Human Intelligence (PHI) Lab.</span></li>
+							<li><span class="news-date">2026</span><span>"DiG-Net: Enhancing Human–Robot Interaction through Hyper-Range Dynamic Gesture Recognition in Assistive Robotics" was published in ACM Transactions on Human-Robot Interaction.</span></li>
+							<li><span class="news-date">2026</span><span>"Speech-to-Trajectory: Learning Intuitive Verbal Guidance for Robot Motion" was published in Intelligent Service Robotics.</span></li>
+							<li><span class="news-date">2026</span><span>Two papers on clinical gait analysis and smartphone-based balance assessment were published in IEEE Transactions on Neural Systems and Rehabilitation Engineering.</span></li>
+							<li><span class="news-date">2025</span><span>"Real-Time Human Finger Pointing Recognition and Estimation for Robot Directives Using a Single Web-Camera" was published in IEEE Access.</span></li>
+							<li><span class="news-date">March 2025</span><span>Appointed as a reviewer for ACM Transactions on Human-Robot Interaction.</span></li>
+							<li><span class="news-date">January 2025</span><span>Awarded the Blavatnik Cambridge Fellowship.</span></li>
+							<li><span class="news-date">November 2024</span><span>"A Diffusion-Based Data Generator for Training Object Recognition Models in Ultra-Range Distance" was accepted to IEEE Robotics and Automation Letters.</span></li>
+							<li><span class="news-date">June 2024</span><span>"Ultra-Range Gesture Recognition using a Web-Camera in Human–Robot Interaction" was accepted to Engineering Applications of Artificial Intelligence.</span></li>
 						    </ul>
 						  </div>
 						</section>
@@ -257,7 +333,7 @@
 													<text style="color:black">Eran Bamani</text>, Eden Nissinman and Avishai Sintov
 												</li>
 												<li> 
-												The paper is currently under review at IEEE Robotics and Automation Letters. <a href="https://arxiv.org/abs/2504.05084" target="_blank">Speech-to-Trajectory: Learning Human-Like Verbal Guidance for Robot Motion </a>. 
+												The paper was published in Intelligent Service Robotics, 2026. <a href="https://arxiv.org/abs/2504.05084" target="_blank">Speech-to-Trajectory: Learning Human-Like Verbal Guidance for Robot Motion </a>. 
  
 												</li> 
 
@@ -288,7 +364,7 @@
 													<text style="color:black">Eran Bamani</text>, Eden Nissinman and Avishai Sintov
 												</li>
 												<li> 
-													The paper is currently under review at the journal Computer Vision and Image Understanding. <a href="https://arxiv.org/abs/2505.24786" target="_blank">DiG-Net: Enhancing Quality of Life through Hyper-Range Dynamic Gesture Recognition in Assistive Robotics </a>. 												
+													The paper was published in ACM Transactions on Human-Robot Interaction, 2026. <a href="https://arxiv.org/abs/2505.24786" target="_blank">DiG-Net: Enhancing Quality of Life through Hyper-Range Dynamic Gesture Recognition in Assistive Robotics </a>. 												
 												</li> 
 
 											</ul>
@@ -438,7 +514,7 @@
 													<text style="color:black">Eran Bamani</text>, Eden Nissinman, Lisa Koenigsberg, Inbar Meir, Yoav Matalon and Avishai Sintov
 												</li>
 												<li> 
-													The Paper is under review. <a href="https://arxiv.org/abs/2307.02949" target="_blank">Recognition and Estimation of Human Finger Pointing with an RGB Camera for Robot Directive </a>
+													The paper was published in IEEE Access, 2025. <a href="https://arxiv.org/abs/2307.02949" target="_blank">Recognition and Estimation of Human Finger Pointing with an RGB Camera for Robot Directive </a>
 												</li>
 											</ul>
 										</div>
@@ -559,14 +635,23 @@
 					<section id="three">
 							<div class="container">
 								<h3>Academic Appointments</h3>
-								<ul id="exp" style="list-style:none;">
-								<li> <img class="school-logo" src="schools/MIT_logo.png"><div class="school-text">
-									<span style="color:black">
-									2025 - Present, Massachusetts Institute of Technology (MIT), Cambridge, MA, <br />Postdoctoral Associate at The 77 Lab
-										</span>
-								
-								</div>
-								</li>
+								<ul class="record-list">
+									<li>
+										<div class="record-when">2026 – Present</div>
+										<div class="record-what">
+											<strong>Assistant Professor (Tenure Track)</strong>
+											<span>Department of Information Science and Applied Artificial Intelligence, Bar-Ilan University</span>
+											<span>Head of the <a href="https://sites.biu.ac.il/en/phi-lab-physical-human-intelligence-laboratory">Physical Human Intelligence Laboratory</a></span>
+										</div>
+									</li>
+									<li>
+										<div class="record-when">2025 – 2026</div>
+										<div class="record-what">
+											<strong>Postdoctoral Associate</strong>
+											<span>Department of Mechanical Engineering, Massachusetts Institute of Technology</span>
+											<span>The 77 Lab</span>
+										</div>
+									</li>
 								</ul>
 							</div>
 						</section>
@@ -575,10 +660,28 @@
 					<!-- Four -->
 						<section id="four">
 							<div class="container">
-								<h3>Education Background</h3>
-								<ul id="exp" style="list-style:none;">
-									<li> <img class="school-logo" src="schools/Tel-Aviv.png"><div class="school-text"><span style="color:black">2021 - 2025, Tel-Aviv University, <br />PhD Student in Deep Learning and Robotics, ISF's Fellow </span></div></li>
-									<br><li> <img class="school-logo" src="schools/Ariel.jpg"><div class="school-text"><span style="color:black">2013 - 2019, Ariel University, <br />B.Sc. and M.Sc. degree in Electronic Engineering, GPA 92/100 </span></div></li>
+								<h3>Education</h3>
+								<ul class="record-list">
+									<li>
+										<div class="record-when">2021 – 2025</div>
+										<div class="record-what">
+											<div class="edu-row">
+												<img class="edu-logo" src="schools/Tel-Aviv.png" alt="Tel Aviv University">
+												<div>
+													<strong>Ph.D. in Mechanical Engineering</strong>
+													<span>Tel Aviv University</span>
+													<span>Dissertation: Intent Recognition in Natural Human-Robot Collaboration</span>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="record-when">2013 – 2019</div>
+										<div class="record-what">
+											<strong>B.Sc. and M.Sc. in Electrical and Electronic Engineering</strong>
+											<span>GPA 95/100, ranked 4th of 321</span>
+										</div>
+									</li>
 								</ul>
 							</div>
 						</section>
@@ -602,13 +705,12 @@
 					<section id="six">
 							<div class="container">
 								<h3>Skills</h3>
-								<ul class="feature-icons">
-									<li class="fa-code"><span style="color:black">Deep Learning frameworks: Pytorch, TensorFlow, JAX, HuggingFace and TorchServe </li>
-									<li class="fa-code"><span style="color:black">Development Tools and Libraries: PyCharm, VSCode, Git, Docker, NVidia CUDA, OpenGL and OpenCV</li>
-									<li class="fa-book"><span style="color:black">Programming Languages: Python, C/C++, Java, Bash and MATLAB</li>
-									<li class="fa-bolt"><span style="color:black">Experience designing novel neural network architectures and optimization methods</li>
-									<li class="fa-coffee"><span style="color:black">Medical CAD: 3D-Slicer, SimpleITK and RadiAnt</li>
-									<li class="fa-cubes"><span style="color:black">Robotics: ROS, Isaac Sim / Lab and RVW</li>
+								<ul class="feature-icons skills">
+									<li class="fa-bolt"><strong>Machine learning</strong><br>PyTorch, TensorFlow, and NVIDIA CUDA</li>
+									<li class="fa-eye"><strong>Computer vision</strong><br>OpenCV and visual perception for movement analysis</li>
+									<li class="fa-cubes"><strong>Robotics</strong><br>ROS and Gazebo</li>
+									<li class="fa-code"><strong>Languages</strong><br>Python, C/C++, MATLAB, and Java</li>
+									<li class="fa-laptop"><strong>Development</strong><br>Git, Linux, and PyCharm</li>
 								</ul>
 							</div>
 						</section>
