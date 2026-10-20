@@ -229,7 +229,7 @@
     #news,
     #three,
     #five,
-    #six {
+    #teaching {
         background: #F3F6FA;
     }
     .thumbnail {
@@ -367,14 +367,20 @@
         flex-wrap: wrap;
         gap: 0.4em;
     }
-    .chips span {
-        background: #F3F6FA;
-        color: #1F4E79;
-        border-radius: 999px;
-        padding: 0.28em 0.72em;
-        font-size: 0.86em;
-        font-weight: 600;
-        line-height: 1.3;
+    .semester {
+        margin: 1.35em 0 0.75em;
+        color: #1F4E79 !important;
+        font-weight: 700;
+        font-size: 0.95em;
+        letter-spacing: 0.02em;
+    }
+    .course-he {
+        margin: 0.45em 0 0;
+        color: #5C6B7A !important;
+        font-size: 0.95em;
+        direction: rtl;
+        text-align: right;
+        line-height: 1.45;
     }
     @media screen and (max-width: 736px) {
         .paper {
@@ -426,7 +432,7 @@
 							<li><a href="#three">Academic Appointments</a></li>
 							<li><a href="#four">Education</a></li>
 							<li><a href="#five">Awards</a></li>
-							<li><a href="#six">Skills</a></li>
+							<li><a href="#teaching">Teaching</a></li>
 
 						</ul>
 					</nav>
@@ -624,29 +630,30 @@
 					</section>
 
 					<!-- Five -->
-					<section id="six">
+					<section id="teaching">
 							<div class="container">
-								<h3>Skills</h3>
+								<h3>Teaching</h3>
+								<p class="section-lead">Department of Information Science and Applied Artificial Intelligence, Bar-Ilan University.</p>
+								<p class="semester">Semester A</p>
 								<div class="skill-grid">
 									<article>
-										<h4>Machine learning</h4>
-										<div class="chips"><span>PyTorch</span><span>TensorFlow</span><span>NVIDIA CUDA</span></div>
+										<h4>Artificial Intelligence for Medical Data</h4>
+										<p class="course-he">בינה מלאכותית לנתונים רפואיים</p>
 									</article>
 									<article>
-										<h4>Computer vision</h4>
-										<div class="chips"><span>OpenCV</span><span>Visual perception</span></div>
+										<h4>Agentic AI Systems</h4>
+										<p class="course-he">מערכות Agentic AI</p>
+									</article>
+								</div>
+								<p class="semester">Semester B</p>
+								<div class="skill-grid">
+									<article>
+										<h4>Computer Vision for Artificial Intelligence Applications</h4>
+										<p class="course-he">ראייה ממוחשבת ליישומי בינה מלאכותית</p>
 									</article>
 									<article>
-										<h4>Robotics</h4>
-										<div class="chips"><span>ROS</span><span>Gazebo</span></div>
-									</article>
-									<article>
-										<h4>Languages</h4>
-										<div class="chips"><span>Python</span><span>C/C++</span><span>MATLAB</span><span>Java</span></div>
-									</article>
-									<article>
-										<h4>Development</h4>
-										<div class="chips"><span>Git</span><span>Linux</span><span>PyCharm</span></div>
+										<h4>Interactive Artificial Intelligence with Unity</h4>
+										<p class="course-he">בינה מלאכותית אינטראקטיבית בעזרת Unity</p>
 									</article>
 								</div>
 							</div>
