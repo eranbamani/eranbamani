@@ -238,6 +238,108 @@
     #header > header .avatar {
         box-shadow: 0 0 0 4px rgba(228, 194, 122, 0.9);
     }
+    #header > header p.lab-link {
+        font-style: normal !important;
+        margin: 0.45em 0 0;
+        font-size: 0.92em;
+    }
+    #header > header p.lab-link a {
+        color: #E4C27A !important;
+        border-bottom: 1px solid rgba(228, 194, 122, 0.55);
+        text-decoration: none;
+    }
+    .section-lead {
+        margin-top: 0.2em;
+        max-width: 42em;
+    }
+    .papers {
+        display: flex;
+        flex-direction: column;
+        gap: 1.1em;
+        margin-top: 1.4em;
+    }
+    .paper {
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        gap: 1.2em;
+        align-items: center;
+        padding: 1rem 1.1rem;
+        background: #fff;
+        border: 1px solid #E3E8EF;
+        border-radius: 12px;
+    }
+    .paper.no-image {
+        grid-template-columns: 1fr;
+    }
+    .paper img {
+        width: 100%;
+        height: 132px;
+        object-fit: cover;
+        border-radius: 8px;
+        display: block;
+    }
+    .paper .venue {
+        margin: 0 0 0.3em;
+        color: #1F4E79 !important;
+        font-size: 0.82em;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        line-height: 1.3;
+    }
+    .paper h4 {
+        margin: 0 0 0.35em;
+        font-size: 1.12em;
+        line-height: 1.35;
+    }
+    .paper h4 a {
+        color: #142033 !important;
+    }
+    .paper .blurb {
+        margin: 0;
+    }
+    h3.subhead {
+        margin-top: 2.4em;
+        font-size: 1.35em;
+    }
+    .paper-list {
+        list-style: none;
+        padding: 0;
+        margin: 0.4em 0 0.6em;
+    }
+    .paper-list li {
+        display: flex;
+        justify-content: space-between;
+        gap: 1.5em;
+        align-items: baseline;
+        padding: 0.72em 0;
+        border-bottom: 1px solid #E4E8EE;
+        margin: 0;
+    }
+    .paper-list .where {
+        flex: 0 0 16em;
+        color: #5C6B7A;
+        font-size: 0.9em;
+        text-align: right;
+    }
+    .scholar-more {
+        margin-top: 1.1em;
+    }
+    @media screen and (max-width: 736px) {
+        .paper {
+            grid-template-columns: 1fr;
+        }
+        .paper img {
+            height: 180px;
+        }
+        .paper-list li {
+            display: block;
+        }
+        .paper-list .where {
+            display: block;
+            text-align: left;
+            margin-top: 0.2em;
+        }
+    }
     hr, hr.major {
         border-bottom: solid 2px #f4f4f4 !important;
     }
@@ -266,6 +368,7 @@
 						<span class="image avatar"><img src="images/eran-profile.jpg" alt="Eran Bamani Beeri" /></span>
 						<h1 id="logo"><a href="#">Eran Bamani Beeri</a></h1>
 						<p class="role">Assistant Professor<br>Bar-Ilan University</p>
+						<p class="lab-link"><a href="https://sites.biu.ac.il/en/phi-lab-physical-human-intelligence-laboratory">Physical Human Intelligence Lab</a></p>
 						<p class="contact-line"><a href="mailto:eran.beeri-bamani@biu.ac.il">eran.beeri-bamani@biu.ac.il</a></p>
 					</header>
 					<nav id="nav">
@@ -330,365 +433,78 @@
 						    </ul>
 						  </div>
 						</section>
-					<!-- Two -->	
+					<!-- Two -->
 						<section id="two">
 							<div class="container">
-								<h3>Research</h3>
-								<div class="features">
-
-
-				<article>
+								<h3>Selected research</h3>
+								<p class="section-lead">Six recent papers. The rest of the list is below, and the full record is on Google Scholar.</p>
+								<div class="papers">
+									<article class="paper no-image">
 										<div>
-											<div class="research"> 
-												<h4> <text style="color:Navy"> Human Arm Pose Estimation With a Shoulder-Worn Force-Myography Device for Human-Robot Interaction </text></h4>
-											</div>
-											
-											<img class="thumbnail" src="images/HPose.gif" data-id="Scaled-carousel" alt="Research Thumbnail">
-											<div id="LPS-carousel" class="carousel">
-												<img class="img-center-carousel" src="images/close-transparent.png" alt="Close Button">
-												<a href="javascript:void(0)">
-													<img src="images/close-transparent.png" alt="" data-carousel-id="Scaled-carousel" class="carousel-close">
-												</a>
-										  	</div>
-											<ul class="thumbnail-right">
-												
-												<li>
-													The paper presents a method for estimating human arm pose in real-time for Human-Robot Interaction using wearable FMG sensors on the shoulder. A Transformer-based model maps muscle signals to arm positions, enabling robots to avoid collisions without vision. The approach works reliably even for new users and in situations where cameras fail. 
-												</li>
-												<li>
-													Rotem Atari, <text style="color:black">Eran Bamani</text> and Avishai Sintov
-												</li>
-												<li> 
-												The paper was accepted for publication in IEEE Robotics and Automation Letters. <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10876595" target="_blank">Human Arm Pose Estimation With a Shoulder-Worn Force-Myography Device for Human-Robot Interaction </a>. 
- 
-												</li> 
-
-											</ul>
-										</div>
-				</article>
-									
-				<article>
-										<div>
-											<div class="research"> 
-												<h4> <text style="color:Navy"> Speech-to-Trajectory: Learning Human-Like Verbal Guidance for Robot Motion </text></h4>
-											</div>
-											
-											<img class="thumbnail" src="images/tranj.gif" data-id="Scaled-carousel" alt="Research Thumbnail">
-											<div id="LPS-carousel" class="carousel">
-												<img class="img-center-carousel" src="images/close-transparent.png" alt="Close Button">
-												<a href="javascript:void(0)">
-													<img src="images/close-transparent.png" alt="" data-carousel-id="Scaled-carousel" class="carousel-close">
-												</a>
-										  	</div>
-											<ul class="thumbnail-right">
-												
-												<li>
-													This work presents the Directive Language Model (DLM), a novel speech-to-trajectory framework that enables robots to follow natural verbal guidance and interpret diverse user commands. DLM maps spoken language directly to executable motion trajectories without relying on predefined phrases, using semantic augmentation and diffusion policy-based trajectory generation. The model achieves robust, human-like motion execution and demonstrates superior accuracy and generalization compared to state-of-the-art methods. 
-												</li>
-												<li>
-													<text style="color:black">Eran Bamani</text>, Eden Nissinman and Avishai Sintov
-												</li>
-												<li> 
-												The paper was published in Intelligent Service Robotics, 2026. <a href="https://arxiv.org/abs/2504.05084" target="_blank">Speech-to-Trajectory: Learning Human-Like Verbal Guidance for Robot Motion </a>. 
- 
-												</li> 
-
-											</ul>
-										</div>
-				</article>
-									
-
-				<article>
-										<div>
-											<div class="research"> 
-												<h4> <text style="color:Navy"> DiG-Net: Enhancing Quality of Life through Hyper-Range Dynamic Gesture Recognition in Assistive Robotics </text></h4>
-											</div>
-											
-											<img class="thumbnail" src="images/sketch.png" data-id="Scaled-carousel" alt="Research Thumbnail">
-											<div id="LPS-carousel" class="carousel">
-												<img class="img-center-carousel" src="images/close-transparent.png" alt="Close Button">
-												<a href="javascript:void(0)">
-													<img src="images/close-transparent.png" alt="" data-carousel-id="Scaled-carousel" class="carousel-close">
-												</a>
-										  	</div>
-											<ul class="thumbnail-right">
-												
-												<li>
-													This work presents DiG-Net, a novel model for assistive robotics that enables accurate recognition of dynamic hand gestures at distances up to 30 meters using only an RGB camera. Integrating depth-conditioned alignment and spatio-temporal graph modules, DiG-Net achieves 97.3% accuracy and significantly improves the real-world usability of assistive robots.
-												</li>
-												<li>
-													<text style="color:black">Eran Bamani</text>, Eden Nissinman and Avishai Sintov
-												</li>
-												<li> 
-													The paper was published in ACM Transactions on Human-Robot Interaction, 2026. <a href="https://arxiv.org/abs/2505.24786" target="_blank">DiG-Net: Enhancing Quality of Life through Hyper-Range Dynamic Gesture Recognition in Assistive Robotics </a>. 												
-												</li> 
-
-											</ul>
-										</div>
-				</article>
-									
-									
-				<article>
-										<div>
-											<div class="research"> 
-												<h4> <text style="color:Navy"> Recognition of Dynamic Hand Gestures in Long Distance using a Web-Camera for Robot Guidance </text></h4>
-											</div>
-											
-											<img class="thumbnail" src="images/avoid.gif" data-id="Scaled-carousel" alt="Research Thumbnail">
-											<div id="LPS-carousel" class="carousel">
-												<img class="img-center-carousel" src="images/close-transparent.png" alt="Close Button">
-												<a href="javascript:void(0)">
-													<img src="images/close-transparent.png" alt="" data-carousel-id="Scaled-carousel" class="carousel-close">
-												</a>
-										  	</div>
-											<ul class="thumbnail-right">
-												
-												<li>
-													In this paper, we propose a model for recognizing dynamic gestures from a long distance of up to 20 meters. The model integrates the SlowFast and Transformer architectures (SFT) to effectively process and classify complex gestures se- sequences captured in video frames. SFT demonstrates superior performance over existing models.
-												</li>
-												<li>
-													<text style="color:black">Eran Bamani</text>, Eden Nissinman and Avishai Sintov
-												</li>
-												<li> 
-													The Paper was accepted to the International Conference on Robotics and Automation 40. <a href="https://arxiv.org/abs/2406.12424" target="_blank">Recognition of Dynamic Hand Gestures in Long Distance using a Web-Camera for Robot Guidance </a>. 
-												
-												</li> 
-
-											</ul>
+											<p class="venue">IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2026</p>
+											<h4><a href="https://doi.org/10.1109/tnsre.2026.3732658" target="_blank">Bridge-Disease Curriculum Transfer Enables Smartphone-Based Balance Assessment in Rare Neurologic Disorders</a></h4>
+											<p class="blurb">Smartphone video and a model trained across related conditions estimate balance when data from a rare neurologic disorder are scarce.</p>
 										</div>
 									</article>
-									
-									<article>
+									<article class="paper no-image">
 										<div>
-											<div class="research"> 
-												<h4> <text style="color:Navy">A Diffusion-based Data Generator for Training Object Recognition Models in Ultra-Range Distance </text></h4>
-											</div>
-											
-											<img class="thumbnail" src="images/synsimg.gif" data-id="Scaled-carousel" alt="Research Thumbnail">
-											<div id="LPS-carousel" class="carousel">
-												<img class="img-center-carousel" src="images/close-transparent.png" alt="Close Button">
-												<a href="javascript:void(0)">
-													<img src="images/close-transparent.png" alt="" data-carousel-id="Scaled-carousel" class="carousel-close">
-												</a>
-										  	</div>
-											<ul class="thumbnail-right">
-												
-												<li>
-													In this paper, we propose the Diffusion in Ultra-Range (DUR) framework, utilizing a Diffusion model to generate labeled images of distant objects in various scenes. DUR trains a URGR model on directive gestures, showing superior fidelity and recognition rates compared to other models. Importantly, training a DUR model on limited real data and using it to generate synthetic data for URGR training outperforms direct real data training. We demonstrate its effectiveness in guiding a ground robot with gesture commands.
-												</li>
-												<li>
-													<text style="color:black">Eran Bamani</text>, Eden Nissinman, Inbar Meir, Lisa Koenigsberg and Avishai Sintov
-												</li>
-												<li> 
-													The paper was accepted for publication in IEEE Robotics and Automation Letters. <a href="https://arxiv.org/abs/2404.09846" target="_blank">A Diffusion-based Data Generator for Training Object Recognition Models in Ultra-Range Distance </a>
-												
-												</li> 
-
-											</ul>
+											<p class="venue">IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2026</p>
+											<h4><a href="https://doi.org/10.1109/tnsre.2026.3675512" target="_blank">Diffusion-Augmented Spatio-Temporal Graph Convolution for Clinical Gait and Motor Function Assessment</a></h4>
+											<p class="blurb">A diffusion model and a graph network assess gait and motor function in cerebral palsy from ordinary video.</p>
 										</div>
 									</article>
-									
-										<article>
+									<article class="paper">
+										<img src="images/stills/dig.jpg" alt="Illustration for DiG-Net">
 										<div>
-											<div class="research"> 
-												<h4> <text style="color:Navy">Ultra-Range Gesture Recognition using a Web-Camera in Human-Robot Interaction </text></h4>
-											</div>
-											
-											<img class="thumbnail" src="images/scheme6.gif" data-id="Scaled-carousel" alt="Research Thumbnail">
-											<div id="LPS-carousel" class="carousel">
-												<img class="img-center-carousel" src="images/close-transparent.png" alt="Close Button">
-												<a href="javascript:void(0)">
-													<img src="images/close-transparent.png" alt="" data-carousel-id="Scaled-carousel" class="carousel-close">
-												</a>
-										  	</div>
-											<ul class="thumbnail-right">
-												
-												<li>
-													In this paper, we address and explore the Ultra-RangeGesture Recognition (URGR) problem and aim for an effective distance of up to 25 meters. We propose a data-based approach that does not require depth information but solely a simple RGB camera. A pioneering aspect of our research involved the development of novel deep-learning architectures. Specifically, HQ-Net was designed to enhance image quality, while GVIT was tailored for the recognition of human gestures.
-												</li>
-												<li>
-													<text style="color:black">Eran Bamani</text>, Eden Nissinman, Inbar Meir, Lisa Koenigsberg and Avishai Sintov
-												</li>
-												<li> 
-													The Paper was accepted for Elsevier ScienceDirect Engineering Applications of Artificial Intelligence 2024. <a href="https://www.sciencedirect.com/science/article/pii/S0952197624006018?dgcid=author" target="_blank">Ultra-Range Gesture Recognition using a Web-Camera in Human-Robot Interaction </a>
-												
-												</li> 
-
-											</ul>
+											<p class="venue">ACM Transactions on Human-Robot Interaction, 2026</p>
+											<h4><a href="https://doi.org/10.1145/3803864" target="_blank">DiG-Net: Hyper-Range Dynamic Gesture Recognition for Assistive Robotics</a></h4>
+											<p class="blurb">Recognizes dynamic hand gestures at distances up to 30 meters using only an RGB camera.</p>
 										</div>
 									</article>
-									
-										<article>
+									<article class="paper">
+										<img src="images/stills/speech.jpg" alt="Illustration for speech-to-trajectory">
 										<div>
-											<div class="research"> 
-												<h4> <text style="color:Navy">Flip-U-Net for In-Hand Object Recognition Using a Force-Myography Device </text></h4>
-											</div>
-											
-											<img class="thumbnail" src="images/scheme5.gif" data-id="Scaled-carousel" alt="Research Thumbnail">
-											<div id="LPS-carousel" class="carousel">
-												<img class="img-center-carousel" src="images/close-transparent.png" alt="Close Button">
-												<a href="javascript:void(0)">
-													<img src="images/close-transparent.png" alt="" data-carousel-id="Scaled-carousel" class="carousel-close">
-												</a>
-										  	</div>
-											<ul class="thumbnail-right">
-												
-												<li>
-													In this paper, we propose a novel Deep Neural-Network architecture for in-hand Object recognition using a wearable Force-Myography Device. The device is based on Force-Myography (FMG) where simple and affordable force sensors measure perturbations of forearm muscles. we show that the proposed network can classify objects grasped by multiple new users without additional training efforts
-												</li>
-												<li>
-													<text style="color:black">Eran Bamani</text>, Nadav Kahanowich, Inbar Ben-David and Avishai Sintov
-												</li>
-												<li> 
-													The Paper was accepted to the International Conference on Robotics and Automation and the Israeli Conference on Robotics.  <a href="Bamani_ICR2023.pdf">In-Hand Object Recognition Using a Force-Myography Device</a></a>
-												
-												</li> 
-
-											</ul>
+											<p class="venue">Intelligent Service Robotics, 2026</p>
+											<h4><a href="https://doi.org/10.1007/s11370-026-00727-0" target="_blank">Speech-to-Trajectory: Learning Intuitive Verbal Guidance for Robot Motion</a></h4>
+											<p class="blurb">Maps spoken guidance directly to robot motion, without a fixed list of commands.</p>
 										</div>
 									</article>
-									
-										<article>
+									<article class="paper">
+										<img src="images/stills/urgr.jpg" alt="Illustration for ultra-range gesture recognition">
 										<div>
-											<div class="research"> 
-												<h4> <text style="color:Navy">Recognition and Estimation of Human Finger Pointing with an RGB Camera for Robot Directive </text></h4>
-											</div>
-											
-											<img class="thumbnail" src="images/scheme4.gif" data-id="Scaled-carousel" alt="Research Thumbnail">
-											<div id="LPS-carousel" class="carousel">
-												<img class="img-center-carousel" src="images/close-transparent.png" alt="Close Button">
-												<a href="javascript:void(0)">
-													<img src="images/close-transparent.png" alt="" data-carousel-id="Scaled-carousel" class="carousel-close">
-												</a>
-										  	</div>
-											<ul class="thumbnail-right">
-												
-												<li>
-													In this paper, we explore the learning of models for robots to understand pointing directives in various indoor and outdoor environments solely based on a single RGB camera. A novel framework is proposed which includes a designated model termed PointingNet. PointingNet recognizes the occurrence of pointing followed by approximating the position and direction of the index finger.
-												</li>
-												<li>
-													<text style="color:black">Eran Bamani</text>, Eden Nissinman, Lisa Koenigsberg, Inbar Meir, Yoav Matalon and Avishai Sintov
-												</li>
-												<li> 
-													The paper was published in IEEE Access, 2025. <a href="https://arxiv.org/abs/2307.02949" target="_blank">Recognition and Estimation of Human Finger Pointing with an RGB Camera for Robot Directive </a>
-												</li>
-											</ul>
+											<p class="venue">Engineering Applications of Artificial Intelligence, 2024</p>
+											<h4><a href="https://www.sciencedirect.com/science/article/pii/S0952197624006018" target="_blank">Ultra-Range Gesture Recognition using a Web Camera</a></h4>
+											<p class="blurb">Recognizes human gestures at up to 25 meters from a simple RGB camera.</p>
 										</div>
 									</article>
-									
-										<article>
+									<article class="paper">
+										<img src="images/stills/arm.jpg" alt="Illustration for arm pose estimation">
 										<div>
-											<div class="research"> 
-												<h4> <text style="color:Navy">Open-Sourcing Generative Models for Data-driven In advance Robot Simulations </text></h4>
-											</div>
-											
-											<img class="thumbnail" src="images/schame3.gif" data-id="Scaled-carousel" alt="Research Thumbnail">
-											<div id="LPS-carousel" class="carousel">
-												<img class="img-center-carousel" src="images/close-transparent.png" alt="Close Button">
-												<a href="javascript:void(0)">
-													<img src="images/close-transparent.png" alt="" data-carousel-id="Scaled-carousel" class="carousel-close">
-												</a>
-										  	</div>
-											<ul class="thumbnail-right">
-												
-												<li>
-													In this paper, we propose to disseminate a generative model rather than actual recorded data. We propose to use a limited amount of real data on a robot to train a Generative Adversarial Network (GAN). We show on two robotic systems that training a regression model using generated synthetic data provides transition accuracy at least as good as real data. Such model could be open-sourced along with the hardware to provide easy and rapid access to research platforms.
-												</li>
-												<li>
-													<text style="color:black">Eran Bamani</text>, Anton Gurevich, Osher Azulay and Avishai Sintov
-												</li>
-												<li> 
-													The Paper was accepted for NeurIPS Data-centric AI 2021. <a href="NeurIPS2021_Data_centric_AI.pdf">Open-Sourcing Generative Models for Data-driven Robot Simulations, <a href="https://neurips.cc/virtual/2021/workshop/38185" target="_blank">Oral</a></a>
-												</li>
-											</ul>
-										</div>
-									</article>
-									
-																											<article>
-										<div>
-											<div class="research"> 
-												<h4> <text style="color:Navy">Learning a Data-Efficient Model for a Single Agent in Homogeneous Multi-Agent Systems</text>  </h4>
-											</div>
-											<img class="thumbnail" src="images/scheme2.gif" data-id="Scaled-carousel"></img>
-											<div id="LPS-carousel" class="carousel">
-												<img class="img-center-carousel" src="images/close-transparent.png" alt="">
-												<a href="javascript:void(0)"><img src="images/close-transparent.png" alt="" data-carousel-id="Scaled-carousel" class="carousel-close"></a>
-										  	</div>
-											<ul class="thumbnail-right">
-												<li>In this paper, we present a novel real-to-sim-to-real framework to bridge the reality gap for homogeneous multi-agent systems. First, we propose a novel deep neural-network architecture termed Convolutional-Recurrent Network (CR-Net) to simulate agents.</li>
-												<li> <text style="color:black">Eran Bamani</text>, Anton Gurevich,and Avishai Sintov </li>
-												<li> The Paper was accepted for Springer Neural Computing and Applications 2023. <a href="https://link.springer.com/article/10.1007/s00521-023-08838-w" target="_blank">Learning a Data-Efficient Model for a Single Agent in Homogeneous Multi-Agent Systems</a></li>
-											</ul>
-										</div>
-									</article>
-								
-																		<article>
-										<div>
-											<div class="research"> 
-												<h4> <text style="color:Navy">Robust Multi-User In-Hand Object Recognition in Human-Robot Collaboration Using a Wearable Force-Myography Device</text>  </h4>
-											</div>
-											<img class="thumbnail" src="images/scheme.png" data-id="Scaled-carousel"></img>
-											<div id="LPS-carousel" class="carousel">
-												<img class="img-center-carousel" src="images/close-transparent.png" alt="">
-												<a href="javascript:void(0)"><img src="images/close-transparent.png" alt="" data-carousel-id="Scaled-carousel" class="carousel-close"></a>
-										  	</div>
-											<ul class="thumbnail-right">
-												<li>In this paper, we explore the use of a wearable device to non-visually recognize objects within the human hand in various possible grasps. The device is based on Force-Myography (FMG) where simple and affordable force sensors measure perturbations of forearm muscles. We propose a novel Deep Neural-Network architecture termed Flip-U-Net inspired by the familiar U-Net architecture Used for image segmentation. </li>
-												<li> <text style="color:black">Eran Bamani</text>, Nadav D. Kahanowich, Inbar Ben-David and Avishai Sintov </li>
-												<li> The Paper was accepted for IEEE robotics and automation letters 2021. <a href="https://ieeexplore.ieee.org/document/9562277" target="_blank">Robust Multi-User In-Hand Object Recognition in Human-Robot Collaboration Using a Wearable Force-Myography</a></li>
-											</ul>
-										</div>
-									</article>
-								
-								
-									<article>
-										<div>
-											<div class="research">
-												<h4> <text style="color:Navy">Scaled Modeling and Measurement for Studying Radio Wave Propagation in Tunnels</text>  </h4>
-											</div>
-											<img class="thumbnail" src="images/Scaled.png" data-id="Scaled-carousel"></img>
-											<div id="LPS-carousel" class="carousel">
-												<img class="img-center-carousel" src="images/close-transparent.png" alt="">
-												<a href="javascript:void(0)"><img src="images/close-transparent.png" alt="" data-carousel-id="Scaled-carousel" class="carousel-close"></a>
-										  	</div>
-											<ul class="thumbnail-right">
-												<li> This work is based on the ray-tracing approach, which is useful for structures where the dimensions are orders of magnitude larger than the transmission wavelength. Using image theory, we utilized a multi-ray model to reveal non-dimensional parameters, enabling measurements in down-scaled experiments. </li>
-												<li> Jacob Gerasimov, Nezah Balal, <text style="color:black">Eran Bamani</text>, Gad A. Pinhasi and Yosef Pinhasi </li>
-												<li> The Paper was accepted for MDPI Electronics 2020. <a href="https://www.mdpi.com/2079-9292/10/1/53" target="_blank">Scaled Modeling and Measurement for Studying Radio Wave Propagation in Tunnels </a></li>
-
-											</ul>
-										</div>
-									</article>
-
-									<article>
-										<div>
-											<div class="research">
-												<h4> <text style="color:Navy">Study Of Human Body Effect On Wireless Indoor Communication</text> </h4>
-												<br>
-											</div>
-											<img class="thumbnail" src="images/Study.png" data-id="Study-carousel"></img>
-											<div id="Study-carousel" class="carousel">
-												<img class="img-center-carousel" src="images/Study.png" alt="">
-												
-												<a href="javascript:void(0)"><img src="images/close-transparent.png" alt="" data-carousel-id="Study-carousel" class="carousel-close"></a>
-										  	</div>
-											<ul class="thumbnail-right">
-												<li> Our reaearch presents signal strength measurements, analysis, and prediction models for indoors, outdoors and near human body scenarios. The measurements were conducted by using a continuous wave transmitter and receiver antenna pair at 0.5GHz.</li>
-												<li> <text style="color:black">Eran Bamani</text> and Gad A. Pinhasi. </li>
-												<li> The Paper was accepted for Israeli - Russian Bi-National Workshop 2019, <a href="Study_Of_Human_Body_Effect_On_Wireless_Indoor_Communication_ws2019cd.pdf">STUDY OF HUMAN BODY EFFECT ON WIRELESS INDOOR COMMUNICATION</a></li>
-											</ul>
+											<p class="venue">IEEE Robotics and Automation Letters, 2025</p>
+											<h4><a href="https://ieeexplore.ieee.org/document/10876595" target="_blank">Human Arm Pose Estimation with a Shoulder-Worn Force-Myography Device</a></h4>
+											<p class="blurb">A wearable sensor on the shoulder estimates arm pose so a robot can avoid collisions when cameras fail.</p>
 										</div>
 									</article>
 								</div>
+
+								<h3 class="subhead">More publications</h3>
+								<ul class="paper-list">
+									<li><a href="https://doi.org/10.1109/ACCESS.2025.3616050" target="_blank">Real-Time Human Finger Pointing Recognition and Estimation for Robot Directives</a><span class="where">IEEE Access, 2025</span></li>
+									<li><a href="https://arxiv.org/abs/2404.09846" target="_blank">A Diffusion-Based Data Generator for Training Object Recognition at Ultra-Range Distance</a><span class="where">IEEE Robotics and Automation Letters, 2024</span></li>
+									<li><a href="https://arxiv.org/abs/2406.12424" target="_blank">Recognition of Dynamic Hand Gestures in Long Distance for Robot Guidance</a><span class="where">IEEE ICRA, 2024</span></li>
+									<li><a href="Bamani_ICR2023.pdf">Flip-U-Net for In-Hand Object Recognition Using a Force-Myography Device</a><span class="where">IEEE ICRA, 2023</span></li>
+									<li><a href="https://link.springer.com/article/10.1007/s00521-023-08838-w" target="_blank">Learning a Data-Efficient Model for a Single Agent in Homogeneous Multi-Agent Systems</a><span class="where">Neural Computing and Applications, 2023</span></li>
+									<li><a href="https://ieeexplore.ieee.org/document/9562277" target="_blank">Robust Multi-User In-Hand Object Recognition Using a Wearable Force-Myography Device</a><span class="where">IEEE Robotics and Automation Letters, 2021</span></li>
+									<li><a href="NeurIPS2021_Data_centric_AI.pdf">Open-Sourcing Generative Models for Data-driven Robot Simulations</a><span class="where">NeurIPS Data-Centric AI Workshop, 2021</span></li>
+									<li><a href="https://www.mdpi.com/2079-9292/10/1/53" target="_blank">Scaled Modeling and Measurement for Studying Radio Wave Propagation in Tunnels</a><span class="where">Electronics, 2020</span></li>
+									<li><a href="Study_Of_Human_Body_Effect_On_Wireless_Indoor_Communication_ws2019cd.pdf">Study of Human Body Effect on Wireless Indoor Communication</a><span class="where">Israeli–Russian Bi-National Workshop, 2019</span></li>
+								</ul>
+								<p class="scholar-more"><a href="https://scholar.google.com/citations?user=l0y02JwAAAAJ&hl=en" target="_blank">Full list on Google Scholar</a></p>
 							</div>
 						</section>
 
 
-
-					<!-- three -->
-						
-					
-					<section id="three">
+<section id="three">
 							<div class="container">
 								<h3>Academic Appointments</h3>
 								<ul class="record-list">
